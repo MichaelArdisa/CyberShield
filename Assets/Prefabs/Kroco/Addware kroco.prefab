@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 6495330003680490487}
   m_Layer: 6
   m_Name: Health Bar
-  m_TagString: HealthBar
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1137,6 +1137,7 @@ MonoBehaviour:
   healthBar: {fileID: 3939283749930471829}
   anim: {fileID: 0}
   dissolveMaterial: {fileID: 2100000, guid: a5a8e1fa5957f38438aad60533851413, type: 2}
+  toDo: {fileID: 0}
   maxHP: 100
   speed: 0.08
   dirDeg: 0

@@ -30,6 +30,7 @@ public class PBehaviour : MonoBehaviour
 
         //PlayerPrefs.SetInt("HP", currHP);
 
+        healthBar = GameObject.FindGameObjectWithTag("PHB").GetComponent<HealthBar>();
         currHP = maxHP;
 
         if (pb != null)

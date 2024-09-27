@@ -32,6 +32,8 @@ public class ToDoBehaviour : MonoBehaviour
         text = "Eliminate all cyber threats! (" + enemyKilled + '/' + enemyCount + ')';
         tmp.text = text;
 
+        //enemyKilled = enemyCount;
+
         if (!toggle.isOn && enemyKilled == enemyCount)
         {
             toggle.isOn = true;

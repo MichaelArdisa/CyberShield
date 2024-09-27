@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 2708748907861761137}
   m_Layer: 6
   m_Name: Health Bar
-  m_TagString: HealthBar
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1226,7 +1226,6 @@ MonoBehaviour:
   speed: 0.05
   dirDeg: 0
   rotSpeed: 20
-  blinkDuration: 0.15
   isHit: 0
   isMalware: 0
   isAdware: 1

@@ -21,7 +21,7 @@ public class EBehaviour : MonoBehaviour
     public float speed;
     public int dirDeg;
     public float rotSpeed;
-    public float blinkDuration;
+    private float blinkDuration = 0.15f;
 
     [Header("Validations")]
     public bool isHit;
@@ -103,8 +103,7 @@ public class EBehaviour : MonoBehaviour
             }
 
             Debug.Log("enemy dead!");
-            toDo.enemyKilled++;
-
+            enemy.layer = 0;
             Invoke(nameof(disableEnemy), 1f);
         }
     }
@@ -132,5 +131,6 @@ public class EBehaviour : MonoBehaviour
     void disableEnemy()
     {
         enemy.SetActive(false);
+        toDo.enemyKilled++;
     }
 }
