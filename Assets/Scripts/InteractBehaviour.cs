@@ -17,7 +17,9 @@ public class InteractBehaviour : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F) && iKey.activeSelf)
+        {
             jobMenu.SetActive(true);
+        }
     }
 
     private void OnTriggerEnter(Collider coll)
