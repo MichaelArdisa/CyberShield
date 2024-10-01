@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3ea9e96943a644198326e9d8ac57a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hbObject: {fileID: 0}
   HPslider: {fileID: 0}
   hpNum: {fileID: 4143958379158579371}
 --- !u!114 &6495330003680490487
@@ -1056,7 +1057,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8728084795208239512}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 1000
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
