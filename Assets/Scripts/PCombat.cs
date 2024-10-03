@@ -14,6 +14,7 @@ public class PCombat : MonoBehaviour
     public GameObject weaponObject;
     public GameObject weaponTrail;
     public ParticleSystem trailFx;
+    public WeaponBehaviour wb;
     private GameObject player;
 
     [Header("Weapon")]
@@ -36,7 +37,8 @@ public class PCombat : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.SetString("weaponName", weaponName);
+        //PlayerPrefs.SetString("weaponName", weaponName);
+        weaponName = PlayerPrefs.GetString("weaponName");
 
         anim = GetComponent<Animator>();
         atkPos = GameObject.FindGameObjectWithTag("AttackPosition").GetComponent<Transform>();
@@ -44,12 +46,15 @@ public class PCombat : MonoBehaviour
         pm = GetComponent<PMove>();
         mousePos = GameObject.FindGameObjectWithTag("MouseTarget").GetComponent<Transform>();
         playerPos = GetComponent<Transform>();
+        wb = GameObject.FindGameObjectWithTag("Weapons").GetComponent<WeaponBehaviour>();
 
         orMoveSpeed = pm.moveSpeed;
         orRotSpeed = pm.rotSpeed;
 
         weaponStats = Resources.Load<Weapon>(weaponName);
         applyStats();
+
+        wb.changeWeaponNow(weaponName);
     }
 
     // Update is called once per frame

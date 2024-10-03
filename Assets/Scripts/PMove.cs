@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -97,7 +95,6 @@ public class PMove : MonoBehaviour
         {
             Quaternion targetRot = Quaternion.LookRotation(isoMove, Vector3.up);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, rotSpeed * Time.deltaTime);
-        
         } 
         //else if (move == Vector3.zero)
         //    player.velocity = Vector3.zero;
@@ -138,5 +135,3 @@ public class PMove : MonoBehaviour
     //        //shopButton.SetActive(false);
     //}
 }
-
-

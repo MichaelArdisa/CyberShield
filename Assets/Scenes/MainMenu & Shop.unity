@@ -62980,6 +62980,7 @@ MonoBehaviour:
   weaponObject: {fileID: 0}
   weaponTrail: {fileID: 0}
   trailFx: {fileID: 0}
+  wb: {fileID: 0}
   weaponName: Machete
   weaponStats: {fileID: 0}
   atkRange: 0
@@ -65807,6 +65808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jobPanelPos: {fileID: 0}
+  panel: {fileID: 1329104103}
   moveInPos: 0
 --- !u!1 &1331038270
 GameObject:
@@ -98115,6 +98117,7 @@ MonoBehaviour:
   shopButton: {fileID: 1061397499}
   anim: {fileID: 491981554}
   npc: {fileID: 0}
+  npcAnim: {fileID: 0}
   lappy: {fileID: 0}
   pm: {fileID: 1329104105}
 --- !u!1 &1959178802
@@ -101664,7 +101667,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2011199289
 MonoBehaviour:
   m_ObjectHideFlags: 0

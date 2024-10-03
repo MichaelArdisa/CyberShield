@@ -6,6 +6,7 @@ using DG.Tweening;
 public class JobPanelMove : MonoBehaviour
 {
     public RectTransform jobPanelPos;
+    public GameObject panel;
     public float moveInPos;
     private float orPos;
 
@@ -20,6 +21,7 @@ public class JobPanelMove : MonoBehaviour
     {
         //panelPos.DOScaleX(moveAwayPos, 1);
         //jobPanelPos.DOMoveY(moveInPos, 0.5f);
+        panel.SetActive(true);
         jobPanelPos.DOLocalMoveY(moveInPos, 0.5f);
     }
 
@@ -28,5 +30,11 @@ public class JobPanelMove : MonoBehaviour
         //panelPos.DOScale(orPos, 1);
         //jobPanelPos.DOMoveY(orPos, 0.5f);
         jobPanelPos.DOLocalMoveY(orPos, 0.5f);
+        Invoke(nameof(dissablePanel), 0.5f);
+    }
+
+    public void dissablePanel()
+    {
+        panel.SetActive(false);
     }
 }

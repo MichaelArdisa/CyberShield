@@ -13,14 +13,14 @@ public class WeaponBehaviour : MonoBehaviour
         pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PCombat>();
         weaponPar = this.gameObject;
 
-        pc.weaponObject = GameObject.FindGameObjectWithTag(pc.weaponName);
-        pc.weaponTrail = GameObject.FindGameObjectWithTag(pc.weaponName + "Trail");
-        pc.trailFx = pc.weaponTrail.GetComponent<ParticleSystem>();
-        pc.weaponTrail.SetActive(false);
+        //pc.weaponObject = GameObject.FindGameObjectWithTag(pc.weaponName);
+        //pc.weaponTrail = GameObject.FindGameObjectWithTag(pc.weaponName + "Trail");
+        //pc.trailFx = pc.weaponTrail.GetComponent<ParticleSystem>();
+        //pc.weaponTrail.SetActive(false);
 
-        foreach (Transform weapons in weaponPar.transform)
-            if (weapons.tag != pc.weaponName)
-                weapons.gameObject.SetActive(false);
+        //foreach (Transform weapons in weaponPar.transform)
+        //    if (weapons.tag != pc.weaponName)
+        //        weapons.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class WeaponBehaviour : MonoBehaviour
         
     }
 
-    public void changeWeapon(string name)
+    public void changeWeaponNow(string name)
     {
         foreach (Transform weapons in weaponPar.transform)
             weapons.gameObject.SetActive(true);
@@ -47,5 +47,11 @@ public class WeaponBehaviour : MonoBehaviour
         pc.weaponName = name;
         pc.weaponStats = Resources.Load<Weapon>(name);
         pc.applyStats();
+    }
+
+    public void changeWeapon(string name)
+    {
+        PlayerPrefs.SetString("weaponName", name);
+        Debug.Log(PlayerPrefs.GetString("weaponName"));
     }
 }
