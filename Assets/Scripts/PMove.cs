@@ -18,8 +18,7 @@ public class PMove : MonoBehaviour
     public float rotSpeed;
     public float dashSpeed;
     public float dashCD;
-    public float trailTime;
-    public float acceleration;
+    public float acc;
 
     [Header("Speed")]
     [SerializeField]private float speedX;
@@ -65,7 +64,7 @@ public class PMove : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && !CD && activeScene.name != "MainMenu & Shop")
         {
             trail.enabled = true;
-            trail.time = trailTime;
+            trail.time = 0.5f;
 
             isDashing = true;
             moveSpeed = moveSpeed * dashSpeed;
@@ -91,7 +90,7 @@ public class PMove : MonoBehaviour
         currVel = player.velocity;
         targPos = new Vector3(isoMove.x * moveSpeed, player.velocity.y, isoMove.z * moveSpeed);
 
-        player.velocity = Vector3.SmoothDamp(player.velocity, targPos, ref currVel, acceleration);
+        player.velocity = Vector3.SmoothDamp(player.velocity, targPos, ref currVel, acc);
 
         // rotation
         if (move != Vector3.zero)
