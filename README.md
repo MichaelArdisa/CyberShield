@@ -9,16 +9,13 @@
 
 ## 📋 Project Info
 
-| **Role** | **Development Time** | **Engine** |
+Developed with Unity 2022
+
+| **Role** | **Name** | **Development Time** 
 |:-|:-|:-|
-| Game Programmer | 2 months | Unity 2022|
-
-<br>
-
-## 👤 Meet the Team
-- Michael Ardisa (Programmer)
-- Allan Alexander Matthew (Designer)
-- Nicholas Diporedjo (3D Artist)
+| Game Programmer | Michael Ardisa (me) | 2 weeks |
+| Game Designer | Allan Alexander Matthew | 2 weeks |
+| 3D Artist | Nicholas Diporedjo | 2 weeks |
 
 <br>
 
