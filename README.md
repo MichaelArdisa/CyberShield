@@ -78,12 +78,25 @@ IEnumerator trailReduce()
 }
 ```
 
-<!-- ### Simple Checkpoint System
-<p align="justify">The checkpoint system in PhaseJumper integrates with the saving system, triggering a save each time the player reaches a checkpoint. It uses PlayerPrefs to store the player's updated X and Y coordinates, which are later combined into a Vector2 and saved in the JSON file format.</p>
+### Scriptable Objects Utilization for Weapon Data
+
+![image](https://github.com/user-attachments/assets/bfc19472-e461-4053-bf48-082c41f49d29)
+![image](https://github.com/user-attachments/assets/645bd655-bc99-433d-ad02-e5bec9d51125)
+
+<p align="justify">Scriptable objects here are used to store key weapon data within the 'Resources' folder, providing a flexible way to manage and modify weapon attributes. This approach makes adding new weapons efficient and straightforward — simply create a new weapon asset file and adjust its data as needed.</p>
 
 ```
-
-``` -->
+[CreateAssetMenu(fileName = "New Weapon", menuName = "Weapon")]
+public class Weapon : ScriptableObject
+{
+    public string weaponName;
+    public Vector3 atkPos;
+    public float atkRange;
+    public int atkDamage;
+    public float atkRate;
+    public float atkDelay;
+}
+```
 
 <br>
 
@@ -91,11 +104,11 @@ IEnumerator trailReduce()
 
 |  Script       | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
-| `GameManager.cs` | Manages the game flow, main menu, pause menu, etc. |
-| `AudioManager.cs`  | Responsible for all the audio in the game. |
-| `PMove.cs`  | Manages all player movements. |
-| `SaveManager.cs`  | Manages the logic behind saving the player's data. |
-| `CP_Behaviour.cs`  | Manages the behaviour of checkpoints |
+| `Weapon.cs` | Scriptable object class used to determine which data needs to be stored. |
+| `EBehaviour.cs`  | Responsible for how the enemies behave around the player. |
+| `PMove.cs`  | Manages all isometric (skewed) player movements. |
+| `ECombat.cs`  | Manages the logic behind the enemies' combat. |
+| `PCombat.cs`  | Manages the logic behind the player's combat. |
 | `etc`  |
 
 <br>
