@@ -9,13 +9,23 @@
 
 ## 📋 Project Info
 
-Developed with Unity 2022
+<b> Developed with Unity 2022 </b>
 
 | **Role** | **Name** | **Development Time** 
 |:-|:-|:-|
-| Game Programmer | Michael Ardisa (me) | 2 weeks |
+| Game Programmer | Michael Ardisa | 2 weeks |
 | Game Designer | Allan Alexander Matthew | 2 weeks |
 | 3D Artist | Nicholas Diporedjo | 2 weeks |
+
+<details>
+  <summary> <b>My Contribution (Game programmer)</b> </summary>
+  
+  - Item 1
+  - Item 2
+  - Item 3
+  
+</details>
+
 
 <br>
 
