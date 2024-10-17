@@ -9,14 +9,14 @@
 
 ## 📋 Project Info
 
-| **Role** | **Team Size** | **Development Time** | **Engine** |
-|:-|:-|:-|:-|
-| Game Programmer | 3 | 2 months | Unity 2022|
+| **Role** | **Development Time** | **Engine** |
+|:-|:-|:-|
+| Game Programmer | 2 months | Unity 2022|
 
 <br>
 
 ## 👤 Meet the Team
-- Michael Ardisa (Lead Programmer)
+- Michael Ardisa (Programmer)
 - Allan Alexander Matthew (Designer)
 - Nicholas Diporedjo (3D Artist)
 
@@ -37,66 +37,21 @@
 
 ![dashMechanic (1)](https://github.com/user-attachments/assets/13778158-761b-4779-a85f-76f97022ce22)
 
-<p align="justify">The dash mechanic in this game works by increasing the player's velocity, allowing them to change direction mid-dash rather than being locked into a straight line. The visual impact of the dash is enhanced by a trail effect, created using the Trail Renderer component. To make the dash feel smoother, the trail time is gradually reduced through a coroutine when the dash ends, giving the trail a retracting effect.</p>
-
-```
-void Update()
-{
-    ...        
-    // dash
-    if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && !CD && activeScene.name != "MainMenu & Shop")
-    {
-        trail.enabled = true;
-        trail.time = 0.5f;
-
-        isDashing = true;
-        moveSpeed = moveSpeed * dashSpeed;
-        Invoke(nameof(dashReset), 0.2f);
-
-        CD = true;
-        Invoke(nameof(coolDown), dashCD + 0.2f);
-    }
-    ...
-}
-
-private void dashReset()
-{
-    moveSpeed = moveSpeed / dashSpeed;
-    isDashing = false;
-    StartCoroutine(trailReduce());
-}
-
-IEnumerator trailReduce()
-{
-    while (trail.time > 0)
-    {
-        trail.time = trail.time - 0.01f;
-        yield return new WaitForSeconds(0.01f);
-    }
-
-    trail.time = 0f;
-}
-```
+- Logic is located within the `PMove.cs` script
+- The dash works by increasing player velocity and allows direction change mid-dash.
+- Trail Renderer component is used for visual impact.
+- Trail time is gradually reduced via coroutine at the end of the dash.
+- Retracting effect is applied to the trail for a smoother dash experience.
 
 ### Scriptable Objects Utilization for Weapon Data
 
 ![image](https://github.com/user-attachments/assets/bfc19472-e461-4053-bf48-082c41f49d29)
 ![image](https://github.com/user-attachments/assets/645bd655-bc99-433d-ad02-e5bec9d51125)
 
-<p align="justify">Scriptable objects here are used to store key weapon data within the 'Resources' folder, providing a flexible way to manage and modify weapon attributes. This approach makes adding new weapons efficient and straightforward — simply create a new weapon asset file and adjust its data as needed.</p>
-
-```
-[CreateAssetMenu(fileName = "New Weapon", menuName = "Weapon")]
-public class Weapon : ScriptableObject
-{
-    public string weaponName;
-    public Vector3 atkPos;
-    public float atkRange;
-    public int atkDamage;
-    public float atkRate;
-    public float atkDelay;
-}
-```
+- Located within the `Weapon.cs` script
+- Scriptable objects are used to store key weapon data in the 'Resources' folder.
+- Flexible method for managing and modifying weapon attributes.
+- Adding new weapons is efficient: create a new weapon asset file and adjust it's data.
 
 <br>
 
