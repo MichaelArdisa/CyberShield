@@ -20,9 +20,9 @@
 <details>
   <summary> <b>My Contribution (Game programmer)</b> </summary>
   
-  - Item 1
-  - Item 2
-  - Item 3
+  - Core mechanics
+  - UI Navigation
+  - Bug Fixing
   
 </details>
 
