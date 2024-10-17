@@ -117,14 +117,12 @@ public class Weapon : ScriptableObject
 
 | **Key Binding** | **Function** |
 |:-|:-|
-| A, S, D | Basic movement |
-| Space | Jump |
-| S-MidAir | Fast-Fall |
-| Esc | Pause |
-| L-Shift or J | Teleport |
+| W, A, S, D | Basic movement |
+| Left-Click | Attack |
+| L-Shift | Dash |
 
 <br>
 
 ## 💻 Setup
 
-This game is not yet finished, a playable version will be available soon!
+This game is still in beta, a playable version will be available soon!
