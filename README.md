@@ -1,6 +1,8 @@
 # CyberShield
 
-![CyberSheild_Gameplay](https://github.com/user-attachments/assets/11d0776f-900e-4ef7-9bc2-0186eead96e4)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/11d0776f-900e-4ef7-9bc2-0186eead96e4" alt="CyberShield Gameplay">
+</p>
 
 ## 🔴 About This Project
 <p align="justify">CyberShield was originally developed as a submission for the Indie Game Ignite (IGI) Showcase and the GameToday Indie Game Competition, but we decided to expand the game even after the competition to further explore its potential. </p>
