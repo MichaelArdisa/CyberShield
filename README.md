@@ -54,8 +54,10 @@
 
 ### Scriptable Objects Utilization for Weapon Data
 
-![image](https://github.com/user-attachments/assets/bfc19472-e461-4053-bf48-082c41f49d29)
-![image](https://github.com/user-attachments/assets/645bd655-bc99-433d-ad02-e5bec9d51125)
+<p align="justify">
+  <img src="https://github.com/user-attachments/assets/645bd655-bc99-433d-ad02-e5bec9d51125" style="width: 40%;">
+  <img src="https://github.com/user-attachments/assets/bfc19472-e461-4053-bf48-082c41f49d29" style="width: 54%;">
+</p>
 
 - Located within the `Weapon.cs` script
 - Scriptable objects are used to store key weapon data in the 'Resources' folder.
