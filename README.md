@@ -92,3 +92,5 @@
 ## 💻 Setup
 
 This game is still in beta, a playable version will be available soon!
+
+<br>
