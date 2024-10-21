@@ -14,7 +14,7 @@
 <b> Developed with Unity 2022 </b>
 
 | **Role** | **Name** | **Development Time** 
-|:-|:-|:-|
+| - | - | - |
 | Game Programmer | Michael Ardisa | 2 weeks |
 | Game Designer | Allan Alexander Matthew | 2 weeks |
 | 3D Artist | Nicholas Diporedjo | 2 weeks |
@@ -82,7 +82,7 @@
 ## 🕹️ Controls
 
 | **Key Binding** | **Function** |
-|:-|:-|
+| - | - |
 | W, A, S, D | Basic movement |
 | Left-Click | Attack |
 | L-Shift | Dash |
