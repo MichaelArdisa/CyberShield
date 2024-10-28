@@ -70,7 +70,7 @@
 
 |  Script       | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
-| <a href="https://github.com/MichaelArdisa/CyberShield/blob/main/Assets/Scripts/Weapon.cs">`Weapon.cs`</th> | Scriptable object class used to determine which data needs to be stored. |
+| <a href="https://github.com/MichaelArdisa/CyberShield/blob/main/Assets/Scripts/Weapon.cs">`Weapon.cs`</a> | Scriptable object class used to determine which data needs to be stored. |
 | `EBehaviour.cs`  | Responsible for how the enemies behave around the player. |
 | `PMove.cs`  | Manages all isometric (skewed) player movements. |
 | `ECombat.cs`  | Manages the logic behind the enemies' combat. |
