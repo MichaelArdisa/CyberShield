@@ -70,11 +70,11 @@
 
 |  Script       | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
-| <a href="https://github.com/MichaelArdisa/CyberShield/blob/main/Assets/Scripts/Weapon.cs">`Weapon.cs`</a> | Scriptable object class used to determine which data needs to be stored. |
-| `EBehaviour.cs`  | Responsible for how the enemies behave around the player. |
-| `PMove.cs`  | Manages all isometric (skewed) player movements. |
-| `ECombat.cs`  | Manages the logic behind the enemies' combat. |
-| `PCombat.cs`  | Manages the logic behind the player's combat. |
+| <a href="https://github.com/MichaelArdisa/CyberShield/blob/main/Assets/Scripts/Weapon.cs">`Weapon.cs` </a> | Scriptable object class used to determine which data needs to be stored. |
+| <a href="https://github.com/MichaelArdisa/CyberShield/blob/main/Assets/Scripts/EBehaviour.cs">`EBehaviour.cs` </a> | Responsible for how the enemies behave around the player. |
+| <a href="https://github.com/MichaelArdisa/CyberShield/blob/main/Assets/Scripts/PMove.cs">`PMove.cs` </a> | Manages all isometric (skewed) player movements. |
+| <a href="https://github.com/MichaelArdisa/CyberShield/blob/main/Assets/Scripts/ECombat.cs">`ECombat.cs` </a> | Manages the logic behind the enemies' combat. |
+| <a href="https://github.com/MichaelArdisa/CyberShield/blob/main/Assets/Scripts/PCombat.cs">`PCombat.cs` </a> | Manages the logic behind the player's combat. |
 | `etc`  |
 
 <br>
