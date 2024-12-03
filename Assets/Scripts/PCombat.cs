@@ -7,7 +7,7 @@ public class PCombat : MonoBehaviour
     [Header("Refs")]
     public Animator anim;
     public Transform atkPos;
-    public EBehaviour EBehave;
+    //public EBehaviour EBehave;
     public PMove pm;
     public Transform mousePos;
     public Transform playerPos;
@@ -73,7 +73,6 @@ public class PCombat : MonoBehaviour
         //Debug.Log(trailFx.startLifetime);
     }
 
-    // func attack bisa ditambahin parameter string weapon biar nanti tinggal anim.SetTrigger(weapon)
     void attack(string weapon)
     {
         // play atk anim
@@ -106,11 +105,25 @@ public class PCombat : MonoBehaviour
         Collider[] hitEnemies;
         hitEnemies = Physics.OverlapSphere(atkPos.position, atkRange, enemyLayers);
 
+        AdWallBehaviour AWBehave;
+        EBehaviour EBehave;
+
         foreach (Collider enemy in hitEnemies)
         {
-            Debug.Log(enemy.name + " hit ");
-            EBehave = enemy.GetComponent<EBehaviour>();
-            EBehave.ETakeDamage(atkDamage);
+
+            if (enemy.name == "Long AdWall" || enemy.name == "Short AdWall")
+            {
+                Debug.Log(enemy.name + " hit ");
+                AWBehave = enemy.GetComponent<AdWallBehaviour>();
+                AWBehave.ETakeDamage(atkDamage);
+            
+            } else
+            {
+                Debug.Log(enemy.name + " hit ");
+                EBehave = enemy.GetComponent<EBehaviour>();
+                EBehave.ETakeDamage(atkDamage);
+            }
+
             //Debug.Log(++count);
         }
 

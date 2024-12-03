@@ -24,6 +24,8 @@ TagManager:
   - Menu
   - HealthBar
   - PHB
+  - AdWall
+  - PauseMenu
   layers:
   - Default
   - TransparentFX

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +12,7 @@ public class PBehaviour : MonoBehaviour
     public Material dissolveMaterial;
     private PBehaviour pb;
     private Scene currScene;
+    private GameObject[] players;
 
     [Header("Values")]
     public int maxHP;
@@ -22,7 +24,7 @@ public class PBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = this.gameObject;
         //currScene = 
 
         //if (currScene.name == "Lv1-1")
@@ -32,6 +34,13 @@ public class PBehaviour : MonoBehaviour
 
         healthBar = GameObject.FindGameObjectWithTag("PHB").GetComponent<HealthBar>();
         currHP = maxHP;
+
+        players = GameObject.FindGameObjectsWithTag("Player");
+        players = players.OrderBy(player => player.transform.GetSiblingIndex()).ToArray();
+
+        if (players.Length > 1 )
+            for (int i = 1; i < players.Length; i++)
+                Destroy(players[i]);
 
         if (pb != null)
             Destroy(player);
