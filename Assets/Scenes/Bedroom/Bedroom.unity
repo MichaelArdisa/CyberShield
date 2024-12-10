@@ -23199,7 +23199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3ea9e96943a644198326e9d8ac57a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hbObject: {fileID: 0}
+  hbObject:
+  - {fileID: 0}
   HPslider: {fileID: 0}
   hpNum: {fileID: 1669642012}
 --- !u!1 &458635416
@@ -52775,6 +52776,7 @@ MonoBehaviour:
   menu: {fileID: 1101148424}
   activeScene:
     m_Handle: 0
+  hbObject: []
 --- !u!1 &1101298245
 GameObject:
   m_ObjectHideFlags: 0
@@ -61292,6 +61294,7 @@ MonoBehaviour:
   dissolveMaterial: {fileID: 0}
   maxHP: 100
   blinkDuration: 0
+  isDead: 0
 --- !u!114 &1271299051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101583,14 +101586,14 @@ RectTransform:
   m_GameObject: {fileID: 2082433055}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2899, y: 1.2899, z: 1.2899}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096085992}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.227, y: 0.223}
+  m_AnchoredPosition: {x: -1.227, y: 0.22304}
   m_SizeDelta: {x: 160.708, y: 140.547}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2082433057

@@ -5951,11 +5951,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1101148429}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: destroyObject
-        m_Mode: 2
+        m_MethodName: destroyPlayer
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1271299045}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -44966,11 +44966,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1101148429}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: destroyObject
-        m_Mode: 2
+        m_MethodName: destroyPlayer
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1271299045}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -44978,11 +44978,11 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1101148429}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: destroyObject
-        m_Mode: 2
+        m_MethodName: destroyHB
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 617972107}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -63518,7 +63518,8 @@ MonoBehaviour:
   menu: {fileID: 1839647334}
   activeScene:
     m_Handle: 0
-  hbObject: {fileID: 0}
+  hbObject:
+  - {fileID: 0}
 --- !u!114 &1101148430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66266,11 +66267,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1101148429}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: destroyObject
-        m_Mode: 2
+        m_MethodName: destroyPlayer
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1271299045}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -66283,18 +66284,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1101148429}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: destroyObject
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 617972107}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
