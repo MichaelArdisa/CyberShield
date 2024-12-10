@@ -24347,7 +24347,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3ea9e96943a644198326e9d8ac57a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hbObject: {fileID: 0}
+  hbObject:
+  - {fileID: 0}
   HPslider: {fileID: 0}
   hpNum: {fileID: 1669642012}
 --- !u!1 &458635416
@@ -54475,6 +54476,7 @@ MonoBehaviour:
   menu: {fileID: 1732390007}
   activeScene:
     m_Handle: 0
+  hbObject: []
 --- !u!1 &1101298245
 GameObject:
   m_ObjectHideFlags: 0
@@ -62850,12 +62852,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 350f075ae6c9a304e8a13967824cbf39, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1271299052}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 350f075ae6c9a304e8a13967824cbf39, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1271299051}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 350f075ae6c9a304e8a13967824cbf39, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1271299050}
   m_SourcePrefab: {fileID: 100100000, guid: 350f075ae6c9a304e8a13967824cbf39, type: 3}
 --- !u!1 &1271299045 stripped
 GameObject:
@@ -62917,53 +62913,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!114 &1271299050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271299045}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 640deec6a7d69c9409ee66ad0e842df0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 458425182}
-  player: {fileID: 0}
-  dissolveMaterial: {fileID: 0}
-  maxHP: 100
-  blinkDuration: 0
---- !u!114 &1271299051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271299045}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35f0aeaca8d76cb4b90dd58bf3ccab13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  atkPos: {fileID: 0}
-  pm: {fileID: 0}
-  mousePos: {fileID: 0}
-  playerPos: {fileID: 0}
-  weaponObject: {fileID: 0}
-  weaponTrail: {fileID: 0}
-  trailFx: {fileID: 0}
-  wb: {fileID: 0}
-  weaponName: Machete
-  weaponStats: {fileID: 0}
-  atkRange: 0
-  atkDamage: 0
-  atkRate: 0
-  atkDelay: 0
-  enemyLayers:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!114 &1271299052
 MonoBehaviour:
   m_ObjectHideFlags: 0

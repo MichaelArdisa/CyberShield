@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public Scene activeScene;
     public GameObject[] hbObject;
     private GameObject hb0;
+    private GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
         activeScene = SceneManager.GetActiveScene();
         hbObject = GameObject.FindGameObjectsWithTag("HealthBar");
         hb0 = hbObject[0];
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -83,5 +85,10 @@ public class GameManager : MonoBehaviour
     public void destroyHB()
     {
         Destroy(hb0);
+    }
+
+    public void destroyPlayer()
+    {
+        Destroy(player);
     }
 }
