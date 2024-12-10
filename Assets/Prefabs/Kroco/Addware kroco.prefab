@@ -235,7 +235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3ea9e96943a644198326e9d8ac57a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hbObject: {fileID: 0}
+  hbObject:
+  - {fileID: 0}
   HPslider: {fileID: 0}
   hpNum: {fileID: 4143958379158579371}
 --- !u!114 &6495330003680490487
@@ -518,7 +519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7104538865198318466
 Transform:
   m_ObjectHideFlags: 0
@@ -1305,13 +1306,22 @@ MonoBehaviour:
   pb: {fileID: 0}
   difference: {x: 0, y: 0, z: 0}
   distance: 0
-  atkRangeE: 0.5
-  atkDamageE: 15
-  atkRateE: 1
-  atkRadE: 1
-  atkDelayE: 1
-  speedResetDelayE: 1.5
-  isBoss: 0
+  atkType: 0
+  atkRangeE:
+  - 0.5
+  - 5
+  atkDamageE: 0f00000014000000
+  atkRateE:
+  - 1
+  - 0.2
+  atkRadE: 3
+  atkDelayE:
+  - 1
+  - 1
+  speedResetDelayE:
+  - 1.5
+  - 1.8
+  isBoss: 1
   isAttacking: 0
   playerLayer:
     serializedVersion: 2
@@ -1328,7 +1338,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78bf861c8226bfc428ad7b5c80dbd45b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundWaveObject: {fileID: 7104538865198318466}
+  soundWaveObject: {fileID: 8248808416990211083}
+  anim: {fileID: 0}
+  timeBeforeAnim: 0.4
+  resetTime: 1.5
   scale: 1
   startEnd: {x: 0.6, y: 1}
   rate: 0.06

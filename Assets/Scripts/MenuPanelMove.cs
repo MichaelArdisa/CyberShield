@@ -22,6 +22,7 @@ public class MenuPanelMove : MonoBehaviour
     public void movePanelAway()
     {
         panelPos.DOScaleX(moveAwayPos, 1);
+        Debug.Log("Panel Jalan");
     }
 
     public void movePanelBack()

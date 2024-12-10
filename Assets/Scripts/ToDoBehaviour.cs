@@ -13,6 +13,7 @@ public class ToDoBehaviour : MonoBehaviour
     private GameObject[] enemies;
     private int enemyCount;
     public int enemyKilled;
+    public bool allEnemyKilled;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,7 @@ public class ToDoBehaviour : MonoBehaviour
         if (!toggle.isOn && enemyKilled == enemyCount)
         {
             toggle.isOn = true;
+            allEnemyKilled = true;
         }
             
     }
