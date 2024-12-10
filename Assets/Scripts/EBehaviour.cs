@@ -44,6 +44,8 @@ public class EBehaviour : MonoBehaviour
             anim = GetComponent<Animator>();
 
         currHP = maxHP;
+
+        healthBar = GetComponentInChildren<HealthBar>();
         healthBar.setMaxHP(maxHP);
 
         toDo = GameObject.FindGameObjectWithTag("Toggle").GetComponent<ToDoBehaviour>();

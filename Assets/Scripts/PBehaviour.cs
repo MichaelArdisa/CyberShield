@@ -19,6 +19,8 @@ public class PBehaviour : MonoBehaviour
     public float blinkDuration;
     private int currHP;
 
+    public bool isDead;
+
     private Color hitColor = new Color(1.0f, 0f, 0f, 0.1f);
 
     // Start is called before the first frame update
@@ -82,6 +84,7 @@ public class PBehaviour : MonoBehaviour
             }
 
             Invoke(nameof(disablePlayer), 1f);
+            isDead = true;
         }
     }
 

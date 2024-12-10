@@ -19,12 +19,13 @@ public class ECombat : MonoBehaviour
     private float activateDistance = 20f;
 
     [Header("Atk Values")]
-    public float atkRangeE;
-    public int atkDamageE;
-    public float atkRateE;
+    public int atkType;
+    public float[] atkRangeE;
+    public int[] atkDamageE;
+    public float[] atkRateE;
     public float atkRadE;
-    public float atkDelayE;
-    public float speedResetDelayE;
+    public float[] atkDelayE;
+    public float[] speedResetDelayE;
 
     [Header("Validations")]
     public bool isBoss;
@@ -68,26 +69,28 @@ public class ECombat : MonoBehaviour
             if (distance < atkRadE)
             {
                 attack();
-                nextAtkTime = Time.time + 1f / atkRateE;
+                nextAtkTime = Time.time + 1f / atkRateE[0];
             }
         }
         else if (Time.time >= nextAtkTime && isBoss && !isAttacking)
         {
             if (distance < atkRadE && !eb.isAdware)
             {
-                attackBoss('1'); // short range
-                nextAtkTime = Time.time + 1f / atkRateE;
-
+                atkType = 0;
+                attackBoss(); // short range
+                nextAtkTime = Time.time + 1f / atkRateE[atkType];
             }
             else if (distance > atkRadE && !eb.isAdware)
             {
-                attackBoss('2'); // long range
-                nextAtkTime = Time.time + 1f / atkRateE;
+                atkType = 1;
+                attackBoss(); // long range
+                nextAtkTime = Time.time + 1f / atkRateE[atkType];
             }
             else if (distance < atkRadE && eb.isAdware)
             {
-                attackBoss('1'); // short range
-                nextAtkTime = Time.time + 1f / atkRateE;
+                atkType = 0;
+                attackBoss(); // short range
+                nextAtkTime = Time.time + 1f / atkRateE[atkType];
             }
         }
     }
@@ -97,40 +100,41 @@ public class ECombat : MonoBehaviour
         isAttacking = true;
 
         anim.SetTrigger("atkE");
-        Invoke("attackHit", atkDelayE);
+        Invoke("attackHit", atkDelayE[atkType]);
 
         eb.speed = eb.speed * 0.05f;
         eb.rotSpeed = eb.rotSpeed * 0.05f;
-        Invoke("resetSpeed", atkDelayE + speedResetDelayE);
+        Invoke("resetSpeed", atkDelayE[atkType] + speedResetDelayE[atkType]);
     }
 
-    public void attackBoss(char type)
+    public void attackBoss()
     {
         isAttacking = true;
 
-        if (type == '1')
+        // hrs ny ini ga perlu lg
+        if (atkType == 0)
             changeToShortAtk();
-        else if (type == '2')
+        else if (atkType == 1)
             changeToLongAtk();
 
-        anim.SetTrigger("atkE" + type);
-        Invoke("attackHit", atkDelayE);
+        anim.SetTrigger("atkE" + atkType.ToString());
+        Invoke("attackHit", atkDelayE[atkType]);
 
         eb.speed = eb.speed * 0.05f;
         eb.rotSpeed = eb.rotSpeed * 0.05f;
-        Invoke("resetSpeed", atkDelayE + speedResetDelayE);
+        Invoke("resetSpeed", atkDelayE[atkType] + speedResetDelayE[atkType]);
     }
 
     public void attackHit()
     {
         Collider[] hitPlayer;
-        hitPlayer = Physics.OverlapSphere(atkPos.position, atkRangeE, playerLayer);
+        hitPlayer = Physics.OverlapSphere(atkPos.position, atkRangeE[atkType], playerLayer);
 
         foreach (Collider player in hitPlayer)
         {
             Debug.Log(player.name + " hit ");
             pb = player.GetComponent<PBehaviour>();
-            pb.PTakeDamage(atkDamageE);
+            pb.PTakeDamage(atkDamageE[atkType]);
             //Debug.Log(++count);
         }
     }
@@ -158,6 +162,6 @@ public class ECombat : MonoBehaviour
         if (atkPos == null)
             return;
 
-        Gizmos.DrawWireSphere(atkPos.position, atkRangeE);
+        Gizmos.DrawWireSphere(atkPos.position, atkRangeE[atkType]);
     }
 }
