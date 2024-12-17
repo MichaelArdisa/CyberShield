@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] hbObject;
     private GameObject hb0;
     private GameObject player;
+    private HealthBar hb;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,13 @@ public class GameManager : MonoBehaviour
         hbObject = GameObject.FindGameObjectsWithTag("HealthBar");
         hb0 = hbObject[0];
         player = GameObject.FindGameObjectWithTag("Player");
+        hb = GameObject.FindGameObjectWithTag("PHB").GetComponent<HealthBar>();
+        Debug.Log("hb: " + hb);
+
+        //if (hbObject.Length > 0)
+        //    hb = hbObject[1].GetComponentInChildren<HealthBar>();
+        //else
+        //    hb = hbObject[0].GetComponentInChildren<HealthBar>();
     }
 
     // Update is called once per frame
@@ -90,5 +98,10 @@ public class GameManager : MonoBehaviour
     public void destroyPlayer()
     {
         Destroy(player);
+    }
+
+    public void setHP(int hp)
+    {
+        hb.setHP(hp);
     }
 }
