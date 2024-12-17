@@ -15,6 +15,6 @@ MonoBehaviour:
   weaponName: Hammer
   atkPos: {x: 0, y: 2, z: 2}
   atkRange: 1.5
-  atkDamage: 55
+  atkDamage: 100
   atkRate: 0.7
   atkDelay: 0.9

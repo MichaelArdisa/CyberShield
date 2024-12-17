@@ -17,6 +17,9 @@ public class Finish : MonoBehaviour
     void Start()
     {
         activeScene = SceneManager.GetActiveScene();
+
+        pm = GameObject.FindGameObjectWithTag("Player").GetComponent<PMove>();
+        pb = GameObject.FindGameObjectWithTag("Player").GetComponent<PBehaviour>();
     }
 
     // Update is called once per frame

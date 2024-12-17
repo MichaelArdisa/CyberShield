@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Machete
   atkPos: {x: 0, y: 2, z: 3}
-  atkRange: 0.7
-  atkDamage: 35
+  atkRange: 1
+  atkDamage: 50
   atkRate: 1.8
   atkDelay: 0.4
